@@ -1,0 +1,103 @@
+.ticker-wrap{
+    background-color: #12192f;
+    height: 100vh;
+    position: relative;
+}
+
+.upper-section{
+    padding: 30px 0px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upper-section h1{
+    color: #fff;
+    font-size: 100px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    text-shadow: 0px 3px 12px rgba(0,0,0,45%);   
+}
+
+.upper-section h1 span{
+    color: #72c5e5;
+    font-weight: 900;
+}
+
+.lower-section{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #cf2c1f;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+.lower-section .ticker{
+    background-color: #fff;
+    padding: 10px 0px;
+    overflow: hidden;
+    display: flex;
+}
+
+.lower-section h3{
+    text-transform: uppercase;
+    font-size: 25px;
+    padding: 5px;
+}
+
+.lower-section .ticker h4{
+    text-align: left;
+    transform: translateX(120%);
+    animation: slide 25s linear infinite;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+.lower-section .ticker h4 span{
+    margin: 0px 20px;
+    font-family: 'san-sarif';
+    font-size: 25px;
+    font-weight: bold;
+    color: #11274c;
+}
+
+.lower-section .live-indicator, .lower-section .presenter{
+    -webkit-backface-visibility : hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    background-color: rgb(240, 240, 34);
+    padding: 10px 20px;
+    left: 60px;
+    transform: skewX(-20deg);
+    top: -40px;
+    box-shadow: 0px 3px 12px rgba(0,0,0,53%);
+}
+
+.lower-section .presenter{
+    background-color: #566eb6;
+    left: unset;
+    right: 60px;
+}
+
+.lower-section .live-indicator span, .lower-section .presenter span{
+    color: #0f284f;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 900;
+    transform: skewX(20deg);
+}
